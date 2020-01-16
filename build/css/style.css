@@ -980,3 +980,14 @@ button.swiper-pagination-bullet {
 
 .swiper-container-coverflow .swiper-wrapper {
   -ms-perspective: 1200px; }
+
+/* Блоки */
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page-header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

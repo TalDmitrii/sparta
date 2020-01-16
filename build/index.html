@@ -5,17 +5,502 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Description" content="Это испытание изменить тебя навсегда.">
-  <!-- <link rel="preload" href="fonts/SuisseIntl-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/SuisseIntl-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+  <link rel="preload" href="fonts/besom.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
   <title>Sparta</title>
 </head>
 
 <body>
-  <header>
-    <h1>Hello!</h1>
+  <header class="page-header">
+    <div class="page-header__bg-wrapper">
+      <div class="page-header__content-wrapper">
+        <div class="page-header__top">
+          <div class="logo">
+            <img src="img/sparta-logo.png" width="58" height="58" alt="Логотип Sparta">
+          </div>
+      
+          <a href="tel:+79304150252">+7 (930) 415 02 52</a>
+      
+          <h1 class="">Спецкурс</h1>
+        </div>
+
+        <section class="about page-header__info">
+          <h2 class="about__header">
+            <span>Выжить</span>
+            <span>любой ценой</span>
+          </h2>
+
+          <div class="about__duration">
+            <ul class="about__time-list">
+              <li class="about__time-item">ПТ</li>
+              <li class="about__time-item">СБ</li>
+              <li class="about__time-item">ВС</li>
+            </ul>
+
+            <p class="about__description">
+              3 дня с утра до вечера
+            </p>
+
+            <a class="link" href="#">Рискнуть</a>
+          </div>
+        </section>
+      </div>
+    </div>
   </header>
+
+  <main class="page-main">
+    <section class="path">
+      <div class="path__content-wrapper">
+        <h2 class="path__header header-bg">
+          <span class="header-bg__front">Что вас ждёт</span>
+          <span class="header-bg__back">Что вас ждёт</span>
+        </h2>
+  
+        <div class="path__content">
+          <p class="path__point path__point--start">Start</p>
+
+          <ul class="path__list">
+            <li class="path__item">
+              <img src="img/task-1.png" width="366" height="297" alt="Изображение">
+              <div class="path__item-description">
+                <h3>Спецзнания</h3>
+                <p>За 3 дня спецкурса вы получите знания, которым обучают военных, альпинистов, спасателей</p>
+              </div>
+            </li>
+            <li class="path__item">
+              <img src="img/task-2.png" width="372" height="312" alt="Изображение">
+              <div class="path__item-description">
+                <h3>Спецнавыки</h3>
+                <p>3 дня в лесу, без палаток, зажигалок и любых других гаджетов, которые облегчали бы жизнь</p>
+              </div>
+            </li>
+            <li class="path__item">
+              <img src="img/task-3.png" width="374" height="385" alt="Изображение">
+              <div class="path__item-description">
+                <h3>Экстрим</h3>
+                <p>Смоделированные экстремальные ситуации, максимально приближенные к реальности. Вам придётся спасать утопающих из воды, спускаться по верёвке по отвесным скалам, добывать воду, жить в шалашах и землянках</p>
+              </div>
+            </li>
+            <li class="path__item">
+              <img src="img/task-4.png" width="393" height="321" alt="Изображение">
+              <div class="path__item-description">
+                <h3>Постоянный стресс</h3>
+                <p>Участникам предстоит преодолевая себя действовать в стрессовой обстановке, применять на практике полученные ранее знания</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="path__point path__point--finish">Finish</p>
+        </div>  
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__content-wrapper">
+        <div class="features__top-block">
+          <div class="features__header-wrapper">
+            <h2 class="features__header">Что даёт наш спец-курс</h2>
+          </div>
+
+          <ul class="features__list">
+            <li class="features__item">
+              <h3>Базовые знания</h3>
+              <p>Вы научитесь не допускать и предотвращать попадание человека в опасные ситуации на природе и в городе</p>
+            </li>
+            <li class="features__item">
+              <h3>Важные навыки</h3>
+              <p>Получите не только все базовые знания, но и навыки, которые могут спасти жизнь и здоровье, как своё, так и родных, близких и людей вокруг</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="features__bottom-block">
+          <h2 class="features__header features__header--decorate">
+            <span>Чего не будет</span>
+            <span>!</span>
+          </h2>
+
+          <ul class="features__list">
+            <li class="features__item">
+              <h3>Нет скуке!</h3>
+              <p>Не будет скучной и нудной теории. Курс состоит на 80% из практики и только на 20% из теории!</p>
+            </li>
+            <li class="features__item">
+              <h3>И вакханалиям</h3>
+              <p>Никаких песен у костра и алкопоходов. Только хардкор!</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-knowledge">
+      <h2 class="new-knowledge__header header-bg">
+        <span class="header-bg__front">ты узнаешь, что делать</span>
+        <span class="header-bg__back">ты узнаешь</span>
+      </h2>
+
+      <ul class="new-knowledge__list">
+        <li class="new-knowledge__item">
+          <img src="img/number-1.png" width="160" height="138" alt="Номер 1">
+          <div>
+            <h3>Если заблудился</h3>
+            <p>Как быть, если заблудился и остался один в лесу, как не умереть от голода и холода, сделать себе ночлег, развести огонь без спичек.</p>
+          </div>
+        </li>
+        <li class="new-knowledge__item">
+          <img src="img/number-2.png" width="174" height="135" alt="Номер 2">
+          <div>
+            <h3>Если встретил диких зверей</h3>
+            <p>Как вести себя в экстремальной ситуации при встрече с лесными животными, даже если «вон та киса» выглядит такой мирной.</p>
+          </div>
+        </li>
+        <li class="new-knowledge__item">
+          <img src="img/number-3.png" width="179" height="135" alt="Номер 3">
+          <div>
+            <h3>Если нужна первая помощь</h3>
+            <p>Ты узнаешь, что делать, если человеку стало плохо, как оказать самопомощь, как вынести пострадавшего из зоны поражения.</p>
+          </div>
+        </li>
+        <li class="new-knowledge__item">
+          <img src="img/number-4.png" width="163" height="140" alt="Номер 4">
+          <div>
+            <h3>Если оказался в воде</h3>
+            <p>Как спасти утопающего. Как не замёрзнуть и просушить одежду. Как подать сигнал SOS.</p>
+          </div>
+        </li>
+        <li class="new-knowledge__item">
+          <img src="img/number-5.png" width="170" height="142" alt="Номер 5">
+          <div>
+            <h3>Если грозит опасность</h3>
+            <p>Узнаешь рабочие алгоритмы действий в различных экстренных ситуациях</p>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="new-knowledge__urban-skills">
+        <h2>Также курс включает в себя блок по безопасности в городе</h2>
+
+        <div class="new-knowledge__list-wrapper">
+          <ul class="new-knowledge__urban-list">
+            <li class="new-knowledge__urban-item">
+              <p>Блок по автомобильной безопасности.</p>
+            </li>
+            <li class="new-knowledge__urban-item">
+              <p>Народные волнения, давки, теракты.</p>
+            </li>
+            <li class="new-knowledge__urban-item">
+              <p>Техногенные и природные катастрофы.</p>
+            </li>
+            <li class="new-knowledge__urban-item">
+              <p>Что должно быть в EDC наборе.</p>
+            </li>
+            <li class="new-knowledge__urban-item">
+              <p>Как действовать во время пожара?</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="order">
+      <div class="order__content-wrapper">
+        <h2 class="order__header">
+          <span>испытай</span>
+          <span>себя на прочность</span>
+        </h2>
+        
+        <a class="link" href="#">Рискнуть</a>
+      </div>
+    </section>
+
+    <section class="new-skills">
+      <div class="new-skills__content-wrapper">
+        <h2 class="new-skills__header header-bg">
+          <span class="header-bg__front">ты приобретёшь навык</span>
+          <span class="header-bg__back">ты приобретёшь</span>
+        </h2>
+
+        <ul class="new-skills__list">
+          <li class="new-skills__item">
+            <p>Освоишь больше десятка узлов</p>
+          </li>
+          <li class="new-skills__item">
+            <p>Побываешь в роли пострадавшего и спасателя</p>
+          </li>
+          <li class="new-skills__item">
+            <p>Проведёшь ночь в партизанском укрытии</p>
+          </li>
+          <li class="new-skills__item">
+            <p>Попробуешь себя в роли Леонардо ДиКаприо в фильме «Выживший»</p>
+          </li>
+          <li class="new-skills__item">
+            <p>Получишь море адреналина, но самое главное - бесценный опыт, который останется с тобой на всю жизнь</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="programma">
+      <div class="programma__content-wrapper">
+        <div class="programma__top-wrapper">
+          <h2 class="programma__header header-bg">
+            <span class="header-bg__front">в Программе спецкурса</span>
+            <span class="header-bg__back">Программа</span>
+          </h2>
+          <div class="programma__inner-wrapper">
+            <div class="programma__list-wrapper">
+              <ul class="programma__list">
+                <li class="programma__item">
+                  <span>01</span>
+                  <p>Военный альпинизм с минимальным набором снаряжения</p>
+                </li>
+                <li class="programma__item">
+                  <span>02</span>
+                  <p>Тактическая медицина</p>
+                </li>
+                <li class="programma__item">
+                  <span>03</span>
+                  <p>Разведение огня без спичек</p>
+                </li>
+                <li class="programma__item">
+                  <span>04</span>
+                  <p>Построение укрытий, долговременных и краткосрочных</p>
+                </li>
+              </ul>
+
+              <ul class="programma__list">
+                <li class="programma__item">
+                  <span>05</span>
+                  <p>Блок по экипировке</p>
+                </li>
+                <li class="programma__item">
+                  <span>06</span>
+                  <p>Аварийно-спасательные работы</p>
+                </li>
+                <li class="programma__item">
+                  <span>07</span>
+                  <p>Первая помощь</p>
+                </li>
+                <li class="programma__item">
+                  <span>08</span>
+                  <p>Методы согрева и просушки одежды</p>
+                </li>
+                <li class="programma__item">
+                  <span>09</span>
+                  <p>Поисково-спасательные работы</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="programma__order">
+              <h3>Записаться и</h3>
+              <a class="link" href="#">Рискнуть</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="instructor">
+      <div class="instructor__content-wrapper">
+        <h2 class="instructor__header header-bg">
+          <span class="header-bg__front">Инструктор</span>
+          <span class="header-bg__back">Инструктор</span>
+        </h2>
+
+        <div class="instructor__top-wrapper">
+          <div class="instructor__img-wrapper">
+            <img src="img/instructor.png" width="310" height="310" alt="Инструктор">
+          </div>
+          <div class="instructor__info">
+            <h3>Роман Попков</h3>
+
+            <div class="instructor__list-wrapper">
+              <ul class="instructor__features-list">
+                <li class="instructor__features-item">
+                  <p>Альпинист</p>
+                </li>
+                <li class="instructor__features-item">
+                  <p>8 восхождений на Эльбрус (Западная и Восточная вершины), восхождение на Монблан. Неоднократно принимал участие в спасательных работах в горах. Спас двоих человек на вершине Эльбруса в снежную бурю</p>
+                </li>
+                <li class="instructor__features-item">
+                  <p>Обучался у военных, горных и инструкторов по туризму</p>
+                </li>
+              </ul>
+  
+              <ul class="instructor__features-list">
+                <li class="instructor__features-item">
+                  <p>Обучался в центре подготовки спасателей</p>
+                </li>
+                <li class="instructor__features-item">
+                  <p>Инструктор по первой помощи по программе Красного Креста</p>
+                </li>
+                <li class="instructor__features-item">
+                  <p>Обучение и  подготовка в Центре медицины катастроф</p>
+                </li>
+                <li class="instructor__features-item">
+                  <p>Дайвер</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="instructor__stats">
+          <ul class="instructor__stats-list">
+            <li class="instructor__stats-item">
+              <span>27</span>
+              <p>Спарт провел в качестве капитана</p>
+            </li>
+            <li class="instructor__stats-item">
+              <span>28</span>
+              <p>прыжков с веревкой (Rope Jumping)</p>
+            </li>
+            <li class="instructor__stats-item">
+              <span>05</span>
+              <p>Спарт организовал (максимальный поток 68 чел.)</p>
+            </li>
+            <li class="instructor__stats-item">
+              <span>35</span>
+              <p>боёв в Бойцовском Клубе</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="order">
+      <div class="order__content-wrapper">
+        <h2 class="order__header">
+          <span>испытай</span>
+          <span>себя на прочность</span>
+        </h2>
+        
+        <a class="link" href="#">Рискнуть</a>
+      </div>
+    </section>
+
+    <div class="cross-section-bg">
+      <section class="feedback">
+        <div class="feedback__content-wrapper">
+          <h2 class="feedback__header header-bg">
+            <span class="header-bg__front">Отзывы</span>
+            <span class="header-bg__back">Отзывы</span>
+          </h2>
+  
+          <section class="video">
+            <h2 class="visually-hidden">Видео</h2>
+            <div class="video__content-wrapper">
+              <button class="video__button" type="button" title="Play">Воспроизвести видео</button>
+              <video class="video__video" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" width="300" height="148" controls="" preload="none"></video>
+            </div>
+          </section>
+  
+          <section class="feedback__slider slider">
+            <h2 class="visually-hidden">Слайдер</h2>
+  
+            <div class="feedback__content slider__content">
+              <ul class="feedback__list slider__list">
+                <li class="feedback__item slider__item">
+                  <div class="feedback__img-wrapper">
+                    <img src="img/feedback.png" width="199" height="265" alt="Участник">
+                  </div>
+                  <div class="feedback__feedback">
+                    <h3>Дмитрий Весна</h3>
+                    <p>Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое способен в последнее время. Ни какое КМБ и прочее с этим не сравнится.</p>
+                  </div>
+                </li>
+                <li class="feedback__item slider__item">
+                  <div class="feedback__img-wrapper">
+                    <img src="img/feedback.png" width="199" height="265" alt="Участник">
+                  </div>
+                  <div class="feedback__feedback">
+                    <h3>Дмитрий Зима</h3>
+                    <p>Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое способен в последнее время. Ни какое КМБ и прочее с этим не сравнится.</p>
+                  </div>
+                </li>
+                <li class="feedback__item slider__item">
+                  <div class="feedback__img-wrapper">
+                    <img src="img/feedback.png" width="199" height="265" alt="Участник">
+                  </div>
+                  <div class="feedback__feedback">
+                    <h3>Джаред Лето</h3>
+                    <p>Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое способен в последнее время. Ни какое КМБ и прочее с этим не сравнится.</p>
+                  </div>
+                </li>
+              </ul>
+  
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <button type="button" class="feedback__button feedback__button--prev swiper-button-prev">
+                <svg width="35" height="50" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.707088 9.85781L9.25223 1.3915L9.21627 9.15009L9.17339 18.4029L0.707088 9.85781Z"></path>
+                </svg>
+                <!-- <svg width="35" height="50">
+                  <use xlink:href="source/img/sprite.svg#rectangle"></use>
+                </svg> -->
+              </button>
+              <button type="button" class="feedback__button feedback__button--next swiper-button-next">
+                <svg width="35" height="50" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.707088 9.85781L9.25223 1.3915L9.21627 9.15009L9.17339 18.4029L0.707088 9.85781Z"></path>
+                </svg>
+                <!-- <svg width="35" height="50">
+                  <use xlink:href="source/img/sprite.svg#rectangle"></use>
+                </svg> -->
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+  
+      <section class="map">
+        <h2 class="map__header header-bg">
+          <span class="header-bg__front">География проведения</span>
+          <span class="header-bg__back">мы здесь были</span>
+        </h2>
+
+        <div class="map__img-wrapper">
+
+        </div>
+      </section>
+
+      <section class="order-form">
+        <div class="order-form__content-wrapper">
+          <h2 class="order-form__header">Есть вопросы?</h2>
+          <p>Оставьте свой номер телефона, наши менеджеры с вами свяжутся и проконсультируют</p>
+
+          <section class="form">
+            <h2 class="visually-hidden">Форма заказа</h2>
+
+            <form action="POST">
+              <label for="name">
+                <input type="text" id="name">
+              </label>
+
+              <label for="phone">
+                <input type="phone" id="phone">
+              </label>
+
+              <button class="link" type="submit">Отправить</button>
+            </form>
+          </section>
+        </div>
+        
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__content-wrapper">
+      <a href="tel:+79304150252">+7 (930) 415 02 52</a>
+
+      <a href="#">Политика конфиденциальности</a>
+
+      <img src="img/sparta-logo-red.png" width="156" height="56" alt="Sparta Логотип">
+    </div>
+  </footer>
 
 
 
