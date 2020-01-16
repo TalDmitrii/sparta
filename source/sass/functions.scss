@@ -1,0 +1,23 @@
+/* stylelint-disable */
+
+@function calc-vw($pixels) {
+  @return $pixels/(1440/100) + vw
+}
+
+@function calc-vh($pixels) {
+  @return $pixels/(800/100) + vh
+}
+
+@function calc-slide-vh($pixels) {
+  @return $pixels/(900/100) + vh
+}
+
+@function calc-rem($pixels) {
+  @return $pixels/16 + rem
+}
+
+@function calc-img-vw($pixels) {
+  @return $pixels/(375/100) + vw
+}
+
+/* stylelint-enable */
