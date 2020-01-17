@@ -1,0 +1,77 @@
+.instructor {
+
+}
+
+.instructor__content-wrapper {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.instructor__top-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 45px;
+}
+
+.instructor__info h3 {
+  color: $header-color;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+  text-align: center;
+
+  margin-top: 20px;
+  margin-bottom: 35px;
+  padding: 0 15px;
+}
+
+.instructor__list-wrapper {
+  background-image: url("../img/side-blot-bg.png"),
+                    url("../img/side-blot-bg.png");
+  background-repeat: no-repeat;
+  background-size: auto 241px;
+  background-repeat: repeat-y;
+  background-position: top 0 left -445px;
+}
+
+.instructor__features-list {
+  @include indents-zero();
+
+  padding-left: 61px;
+  padding-right: 15px;
+}
+
+.instructor__stats {
+  padding: 0 15px;
+}
+
+.instructor__stats-list {
+  @include indents-zero();
+}
+
+.instructor__stats-item {
+  display: flex;
+  align-items: center;
+}
+
+.instructor__stats-item span {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: $font-family-decorate;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  color: $main-color;
+  text-transform: uppercase;
+  letter-spacing: 5.8px;
+
+  margin-right: 44px;
+}
+
+.instructor__stats-item p {
+  margin-top: 0;
+}

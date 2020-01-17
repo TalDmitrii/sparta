@@ -1,0 +1,20 @@
+.map {
+  // transform: translateY(-30px);
+  padding-bottom: 489px;
+
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 489px;
+  background-position: bottom center;
+}
+
+.map__img-wrapper {
+  display: flex;
+}
+
+.map__img-wrapper img {
+  height: 489px;
+  width: auto;
+
+  object-fit: cover;
+}

@@ -1,0 +1,153 @@
+.features {
+  color: $color-white;
+
+  padding: 130px 15px 115px;
+
+  background-image: url("../img/dark-gradient-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.features__content-wrapper {
+  max-width: 550px;
+
+  margin: 0 auto;
+}
+
+.features__top-block {
+  margin-bottom: 37px;
+  padding: 4px;
+
+  background-image: url("../img/border@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.features__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 15px;
+  padding: 10px 15px 10px 36px;
+
+  background-image: url("../img/red-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
+  @media (max-width: 600px) {
+    min-height: 86.56vw;
+  }
+
+  @media (min-width: 601px) {
+    min-height: 500px;
+  }
+}
+
+.features__header {
+  max-width: 350px;
+
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.82px;
+
+  margin: 0;
+}
+
+.features__list {
+  @include indents-zero();
+}
+
+.features__item {
+  margin-bottom: 35px;
+}
+
+.features__item h3 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.57px;
+
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.features__top-block .features__list {
+  counter-reset: section;
+
+  padding: 0 20px 15px;
+}
+
+.features__top-block .features__item h3 {
+  text-align: end;
+
+  padding-top: 13px;
+  padding-left: 45px;
+  padding-right: 2px;
+
+  &::before {
+    counter-increment: section;
+    content: "0" counter(section);
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0.15;
+    color: $color-white;
+    font-family: $font-family-decorate;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 3.6px;
+  }
+}
+
+.features__item p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  margin: 0;
+}
+
+.features__header--decorate {
+  display: flex;
+  align-items: center;
+
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+
+  margin-bottom: 25px;
+}
+
+.features__header--decorate .features__header-elem {
+  display: block;
+  flex-shrink: 0;
+  width: 106px;
+  height: 116px;
+
+  font-family: $font-family-decorate;
+  font-size: 76px;
+  line-height: 76px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  text-align: center;
+
+  margin-left: 6px;
+  padding-top: 29px;
+
+  background-image: url("../img/blot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

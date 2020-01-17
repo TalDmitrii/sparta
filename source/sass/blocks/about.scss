@@ -1,0 +1,76 @@
+.about {
+
+}
+
+.about__header {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+}
+
+.about__header span:first-child {
+
+
+  color: $main-color;
+  font-family: $font-family-decorate;
+  font-size: 92px;
+  line-height: 100px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 8.91px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.34);
+}
+
+.about__header span:last-child {
+  transform: translateY(-20px);
+
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.32px;
+  color: $color-white;
+
+  margin-bottom: 10px;
+}
+
+.about__duration {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+.about__time-list {
+  @include indents-zero();
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 205px;
+  min-height: 40px;
+
+  color: $color-black;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+
+  padding: 0 10px;
+
+  background-image: url("../img/chain-3-elem.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__description {
+  color: $color-white;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  font-style: italic;
+
+  margin: 0;
+  margin-left: 8px;
+}

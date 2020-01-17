@@ -1,0 +1,60 @@
+.video {
+  // margin-bottom: 50px;
+}
+
+.video__content-wrapper {
+  position: relative;
+  display: flex;
+
+  margin: 0 14px;
+}
+
+.video__video {
+  width: 100%;
+  height: 51.25vw;
+
+  background-image: url("../img/poster.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.video__content-wrapper--js .video__button {
+  display: block;
+}
+
+.video__button {
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  font-size: 0;
+
+  padding: 0;
+  
+  background-image: url("../img/youtube@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.video__button--animation {
+  animation-name: button-remove;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-remove {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
