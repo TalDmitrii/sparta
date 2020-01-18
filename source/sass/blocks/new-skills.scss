@@ -23,6 +23,19 @@
   background-position: top 0 right 220px;
 
   border-bottom: 1px solid transparent;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+    transform: translateY(-10px);
+
+    padding-top: 58px;
+    padding-bottom: 20px;
+
+    background-image: url("../img/man.png"),
+                      url("../img/curvilinear-tablet.png");
+    background-size: auto;
+    background-position: bottom 20px left 0, top 0 left 0;
+  }
 }
 
 .new-skills__item:nth-child(1) {
@@ -30,6 +43,11 @@
 
   margin-bottom: 80px;
   margin-left: 90px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 290px;
+    margin-bottom: 75px;
+  }
 }
 
 .new-skills__item:nth-child(2) {
@@ -37,6 +55,12 @@
 
   margin-bottom: 70px;
   margin-left: 120px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 210px;
+
+    margin-left: 384px;
+  }
 }
 
 .new-skills__item:nth-child(3) {
@@ -44,6 +68,11 @@
 
   margin-bottom: 80px;
   margin-left: 130px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 450px;
+    margin-bottom: 100px;
+  }
 }
 
 .new-skills__item:nth-child(4) {
@@ -51,6 +80,13 @@
 
   margin-bottom: 50px;
   margin-left: 110px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 230px;
+
+    margin-left: 490px;
+    margin-bottom: 90px;
+  }
 }
 
 .new-skills__item:nth-child(5) {
@@ -58,6 +94,11 @@
 
   margin-bottom: 50px;
   margin-left: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 510px;
+    // margin-bottom: 90px;
+  }
 }
 
 .new-skills__item p {

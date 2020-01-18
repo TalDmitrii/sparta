@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .page-footer__tel {
@@ -15,6 +21,10 @@
   text-decoration: none;
 
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__privacy-policy {
@@ -26,4 +36,8 @@
   margin-bottom: 50px;
 
   border-bottom: 1px dashed $color-grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 25px;
+  }
 }

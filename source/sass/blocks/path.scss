@@ -6,6 +6,10 @@
   max-width: 450px;
 
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+  }
 }
 
 .path__point {
@@ -31,6 +35,10 @@
     box-shadow: 0 0 0 5px rgba($main-color, 0.15);
     border-radius: 50%;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .path__point--start {
@@ -51,12 +59,83 @@
 
 .path__list {
   @include indents-zero();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 60px;
+
+    // background-image: url("../img/path-bg.png");
+    background-image: url("../img/7-layers.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top 0 right 121px;
+  }
 }
 
 .path__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.path__item:nth-child(even) {
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+  }
+}
+
+.path__item:last-of-type {
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+
+    margin-left: auto;
+    align-self: flex-end;
+  }
+}
+
+.path__item img {
+  max-width: 300px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 30px;
+  }
+}
+
+.path__item:nth-child(even) img {
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+}
+
+.path__item:last-of-type img {
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.path__item:nth-child(1) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.path__item:nth-child(3) {
+  @media (min-width: $tablet-width) {
+    margin-top: -5px;
+  }
+}
+
+.path__item-description {
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+  }
 }
 
 .path__item h3 {
@@ -70,6 +149,10 @@
 
   margin-top: 20px;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
 }
 
 .path__item p {
@@ -80,4 +163,8 @@
 
   margin: 0;
   margin-bottom: 47px;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
 }

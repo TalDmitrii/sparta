@@ -1,10 +1,16 @@
 .instructor {
-
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .instructor__content-wrapper {
   max-width: 450px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 800px;
+  }
 }
 
 .instructor__top-wrapper {
@@ -31,10 +37,17 @@
 .instructor__list-wrapper {
   background-image: url("../img/side-blot-bg.png"),
                     url("../img/side-blot-bg.png");
-  background-repeat: no-repeat;
   background-size: auto 241px;
   background-repeat: repeat-y;
   background-position: top 0 left -445px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+
+    padding-left: 16px;
+
+    background-image: none;
+  }
 }
 
 .instructor__features-list {
@@ -44,17 +57,51 @@
   padding-right: 15px;
 }
 
+.instructor__features-list:first-of-type {
+  @media (min-width: $tablet-width) {
+    width: 479px;
+    flex-shrink: 0;
+
+    padding-left: 71px;
+
+    background-image: url("../img/side-blot-bg.png"),
+                    url("../img/side-blot-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+.instructor__features-list:last-of-type {
+  @media (min-width: $tablet-width) {
+    padding-left: 18px;
+    padding-right: 30px;
+  }
+}
+
 .instructor__stats {
   padding: 0 15px;
 }
 
 .instructor__stats-list {
   @include indents-zero();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .instructor__stats-item {
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+
+    margin-bottom: 25px;
+    padding-right: 80px;
+  }
 }
 
 .instructor__stats-item span {
@@ -70,6 +117,13 @@
   letter-spacing: 5.8px;
 
   margin-right: 44px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 120px;
+    line-height: 120px;
+
+    margin-right: 25px;
+  }
 }
 
 .instructor__stats-item p {

@@ -5,20 +5,56 @@
   background-repeat: no-repeat;
   background-size: auto 300px;
   background-position: bottom 0 left 0;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 430px;
+
+    background-image: url("../img/multiphoto-tablet.png");
+    background-size: auto 473px;
+  }
+}
+
+.programma__content {
+  @media (min-width: $tablet-width) {
+    max-width: 837px;
+
+    margin: 0 auto;
+    padding: 80px 25px 45px;
+  }
 }
 
 .programma__top-wrapper {
-  padding-bottom: 60px;
-
   background-image: url("../img/paper-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-width: $tablet-width) {    
+    background-image: none;
+  }
 }
 
 .programma__header .header-bg__back {
   color: $color-white;
   opacity: 0.8;
+
+  @media (min-width: $tablet-width) {
+    color: $header-background-color;
+    opacity: 0.1;
+  }
+}
+
+.programma__inner-wrapper {
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
+
+    background-image: url("../img/paper-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .programma__list-wrapper {
@@ -27,12 +63,25 @@
 
   margin: 0 auto 50px;
   padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    display: flex;
+
+    padding: 0;
+  }
 }
 
 .programma__list {
   @include indents-zero();
 
   padding-left: 46px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+
+    padding-right: 30px;
+  }
 }
 
 .programma__item {
@@ -64,6 +113,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 74px;
+  }
 }
 
 .programma__order h3 {
@@ -79,4 +136,11 @@
   text-transform: uppercase;
   letter-spacing: 3.43px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+
+    margin-bottom: 0;
+  }
 }

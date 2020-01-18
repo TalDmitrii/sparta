@@ -1,11 +1,19 @@
 .map {
-  // transform: translateY(-30px);
   padding-bottom: 489px;
 
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: auto 489px;
   background-position: bottom center;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/map-decor-tablet.png"),
+                      url("../img/map-tablet.jpg");
+    background-size: 100% 795px, auto 708px;
+    background-position: bottom left , bottom 45px left -134px;
+
+    padding-bottom: 795px;
+  }
 }
 
 .map__img-wrapper {

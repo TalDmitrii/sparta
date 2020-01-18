@@ -1,5 +1,7 @@
 .video {
-  // margin-bottom: 50px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .video__content-wrapper {
@@ -7,6 +9,10 @@
   display: flex;
 
   margin: 0 14px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 54px;
+  }
 }
 
 .video__video {
@@ -17,6 +23,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/poster-tablet.jpg");
+  }
 }
 
 .video__content-wrapper--js .video__button {
@@ -44,6 +54,11 @@
   background-color: transparent;
   border: none;
   outline: none;
+
+  @media (min-width: $tablet-width) {
+    width: 77px;
+    height: 86px;
+  }
 }
 
 .video__button--animation {

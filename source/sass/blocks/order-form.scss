@@ -10,6 +10,13 @@
   background-repeat: no-repeat;
   background-size: auto 116px, auto 100%;
   background-position: top -60px center, center;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/form-decor-desktop.png"),
+                    url("../img/form-bg-tablet.jpg");
+    background-position: top -20px center, center;
+    background-size: 100% auto, 100% 100%;
+  }
 }
 
 .order-form__content-wrapper {
@@ -28,6 +35,11 @@
 
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 65px;
+    line-height: 65px;
+  }
 }
 
 .order-form__intro {

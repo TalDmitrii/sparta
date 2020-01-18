@@ -1,0 +1,8 @@
+.cross-section-bg {
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/video-bg.png");
+    background-repeat: no-repeat;
+    background-position: top -320px left 50%;
+    background-size: auto;
+  }
+}

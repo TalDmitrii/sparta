@@ -1,15 +1,13 @@
 .new-knowledge {
   margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .new-knowledge__header {
   margin-bottom: 35px;
-}
-
-.new-knowledge__list-wrapper {
-  max-width: 400px;
-
-  margin: 0 auto;
 }
 
 .new-knowledge__list {
@@ -19,6 +17,15 @@
 
   margin: 0 auto 10px;
   padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+  }
 }
 
 .new-knowledge__item {
@@ -27,10 +34,25 @@
   align-items: center;
 
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+
+    padding: 0 30px;
+  }
 }
 
 .new-knowledge__item img {
   margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    height: 94px;
+    width: auto;
+  }
+}
+
+.new-knowledge__description {
+  max-width: 100%;
 }
 
 .new-knowledge__description h3 {
@@ -45,12 +67,27 @@
 }
 
 .new-knowledge__description p {
+  max-width: 100%;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: center;
 
   margin-top: 0;
+}
+
+.new-knowledge__list-wrapper {
+  max-width: 400px;
+
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1180px;
+    overflow-x: scroll;
+
+    padding-left: 20px;
+  }
 }
 
 .new-knowledge__urban-skills h2 {
@@ -65,6 +102,15 @@
   margin: 0;
   margin-bottom: 43px;
   padding: 0 13px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 750px;
+
+    font-size: 36px;
+    line-height: 42px;
+
+    margin: 0 auto 53px;
+  }
 }
 
 .new-knowledge__urban-list {
@@ -84,6 +130,20 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: top 0 left 31px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 1160px;
+    min-height: auto;
+
+    padding: 80px 0 60px;
+
+
+    background-image: url("../img/red-chain-desktop.png");
+    background-size: auto;
+    background-position: top 0 left 0;
+  }
 }
 
 .new-knowledge__urban-item {
@@ -112,11 +172,32 @@
     background-size: cover;
     background-position: center;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-shrink: 0;
+
+    &::before {
+      left: 0;
+      top: -56px;
+    }
+  }
 }
 
+// Костыль. Отдельные изображения для пунктов. ////////////////////////////////////////////
+// Начало.
 .new-knowledge__urban-item:nth-child(1) {
   &::before {
     background-image: url("../img/dot-1.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 212px;
+
+    &::before {
+      background-image: none;
+    }
   }
 }
 
@@ -124,11 +205,28 @@
   &::before {
     background-image: url("../img/dot-2.png");
   }
+
+  @media (min-width: $tablet-width) {
+    width: 249px;
+    padding-right: 50px;
+
+    &::before {
+      background-image: none;
+    }
+  }
 }
 
 .new-knowledge__urban-item:nth-child(3) {
   &::before {
     background-image: url("../img/dot-3.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 228px;
+
+    &::before {
+      background-image: none;
+    }
   }
 }
 
@@ -136,13 +234,31 @@
   &::before {
     background-image: url("../img/dot-4.png");
   }
+
+  @media (min-width: $tablet-width) {
+    width: 290px;
+
+    &::before {
+      background-image: none;
+    }
+  }
 }
 
 .new-knowledge__urban-item:nth-child(5) {
   &::before {
     background-image: url("../img/dot-5.png");
   }
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+
+    &::before {
+      background-image: none;
+    }
+  }
 }
+// Конец кошмара.
+////////////////////////////////////////////////////////////////////////////
 
 .new-knowledge__urban-item p {
   font-size: 16px;

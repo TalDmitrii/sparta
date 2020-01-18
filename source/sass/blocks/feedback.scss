@@ -4,10 +4,18 @@
 
 .feedback__content-wrapper {
   padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
 }
 
 .feedback__header.header-bg {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .feedback__slider {
@@ -15,12 +23,20 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+  }
 }
 
 .feedback__content {
   position: relative;
 
   padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
 }
 
 .feedback__list {
@@ -35,16 +51,40 @@
   padding-top: 111px;
   padding-bottom: 200px;
 
-  
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    padding-left: 80px;
+    padding-right: 80px;
+
+    background-image: url("../img/feedback-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
 }
 
 .feedback__img-wrapper {
+  flex-shrink: 0;
+
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 26px;
+  }
 }
 
 .feedback__img-wrapper img {
   height: 156px;
   width: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: auto;
+  }
 }
 
 .feedback__feedback h3 {
@@ -57,6 +97,16 @@
 
   margin: 0 auto 25px;
   padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+
+    text-align: start;
+
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
 }
 
 .feedback__feedback p {
@@ -66,6 +116,14 @@
 
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+
+    text-align: start;
+
+    padding-left: 0;
+  }
 }
 
 .feedback__pagination {
