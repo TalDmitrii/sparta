@@ -17,6 +17,16 @@
     background-position: top -20px center, center;
     background-size: 100% auto, 100% 100%;
   }
+
+  @media (min-width: $laptop-width) {
+    padding-top: 200px;
+    padding-bottom: 220px;
+
+    background-image: url("../img/form-decor-desktop.png"),
+                      url("../img/form-bg-desktop.jpg");
+    background-position: top -50px center, center;
+    background-size: 100% 109px, 100% 100%;
+  }
 }
 
 .order-form__content-wrapper {

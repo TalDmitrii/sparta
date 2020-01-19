@@ -17,6 +17,12 @@
   @media (min-width: $tablet-width) {
     min-height: 135px;
   }
+
+  @media (min-width: $laptop-width) {
+    min-height: 200px;
+
+    padding-top: 30px;
+  }
 }
 
 .header-bg__front {
@@ -44,6 +50,11 @@
     font-size: 48px;
     line-height: 50px;
   }
+
+  @media (min-width: $laptop-width) {
+    font-size: 68px;
+    line-height: 72px;
+  }
 }
 
 .header-bg__back {
@@ -67,5 +78,10 @@
   @media (min-width: $tablet-width) {
     font-size: 130px;
     line-height: 130px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 180px;
+    line-height: 220px;
   }
 }

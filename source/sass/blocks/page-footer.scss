@@ -12,6 +12,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  @media (min-width: $laptop-width) {
+    max-width: 1100px;
+
+    margin: 0 auto;
+  }
 }
 
 .page-footer__tel {

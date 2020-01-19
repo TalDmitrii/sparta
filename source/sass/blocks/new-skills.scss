@@ -1,11 +1,23 @@
 .new-skills {
   padding-top: 30px;
 
-  
+  @media (min-width: $laptop-width) {
+    padding-top: 80px;
+  }
 }
 
-.new-skills__header {
-  // margin-bottom: 70px;
+.new-skills__content-wrapper {
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/man.png");
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $laptop-width) {
+    background-image: url("../img/man-desktop.png");
+    background-position: top 130px right 46vw;
+    background-repeat: no-repeat;
+  }
 }
 
 .new-skills__list {
@@ -31,10 +43,24 @@
     padding-top: 58px;
     padding-bottom: 20px;
 
-    background-image: url("../img/man.png"),
-                      url("../img/curvilinear-tablet.png");
+    background-image:  url("../img/curvilinear-tablet.png");
     background-size: auto;
-    background-position: bottom 20px left 0, top 0 left 0;
+    background-position: top 0 left 0;
+  }
+
+  @media (min-width: $laptop-width) {
+    max-width: 1140px;
+
+    padding-left: 250px;
+
+    background-image: url("../img/curvilinear-tablet.png");
+    background-position: top 0 left 250px;
+  }
+
+  @media (min-width: $laptop-large-width) {
+    padding-left: 372px;
+
+    background-position: top 0 left 372px;
   }
 }
 

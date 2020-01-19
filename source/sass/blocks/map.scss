@@ -10,9 +10,21 @@
     background-image: url("../img/map-decor-tablet.png"),
                       url("../img/map-tablet.jpg");
     background-size: 100% 795px, auto 708px;
-    background-position: bottom left , bottom 45px left -134px;
+    background-position: bottom left, bottom 45px left -134px;
 
     padding-bottom: 795px;
+  }
+
+  @media (min-width: $laptop-large-width) {
+    background-image: url("../img/map-decor-desktop.png"),
+                      url("../img/map-tablet.jpg");
+    background-position: bottom left, bottom 45px center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 36vw;
+
+    background-size: 100% 36vw, 100% auto;
   }
 }
 

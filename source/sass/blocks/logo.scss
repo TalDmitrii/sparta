@@ -1,0 +1,15 @@
+.logo picture {
+  display: flex;
+}
+
+.logo img {
+  @media (min-width: $tablet-width) {
+    width: 160px;
+    height: 58px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 247px;
+    height: 89px;
+  }
+}

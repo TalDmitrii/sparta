@@ -12,9 +12,16 @@
   text-decoration: none;
   text-align: center;
 
-  padding: 13px 20px;
+  padding: 19px 20px 10px;
   
   background-image: url("../img/button-bg@2x.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  @media (min-width: $laptop-width) {
+    width: 307px;
+    height: 73px;
+
+    padding-top: 18px;
+  }
 }
