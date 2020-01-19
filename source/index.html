@@ -47,7 +47,7 @@
             </p>
           </div>
 
-          <a class="link" href="#">Рискнуть</a>
+          <a class="link order-button-js" href="#">Рискнуть</a>
         </section>
       </div>
     </div>
@@ -151,7 +151,7 @@
           <div class="new-knowledge__description">
             <h3>Если заблудился</h3>
             <p>Как быть, если заблудился и остался один в лесу, как не умереть от голода и холода, сделать себе ночлег, развести огонь без спичек.</p>
-          </div class="new-knowledge__description">
+          </div>
         </li>
         <li class="new-knowledge__item">
           <img src="img/number-2.png" width="118" height="92" alt="Номер 2">
@@ -215,7 +215,7 @@
           <span>себя<br> на прочность</span>
         </h2>
         
-        <a class="link order__link" href="#">Рискнуть</a>
+        <a class="link order__link order-button-js" href="#">Рискнуть</a>
       </div>
     </section>
 
@@ -292,7 +292,7 @@
   
               <div class="programma__order">
                 <h3>Записаться и</h3>
-                <a class="link" href="#">Рискнуть</a>
+                <a class="link order-button-js" href="#">Рискнуть</a>
               </div>
             </div>
           </div>
@@ -375,7 +375,7 @@
           <span>себя<br> на прочность</span>
         </h2>
         
-        <a class="link order__link" href="#">Рискнуть</a>
+        <a class="link order__link order-button-js" href="#">Рискнуть</a>
       </div>
     </section>
 
@@ -456,13 +456,14 @@
           <section class="form">
             <h2 class="visually-hidden">Форма заказа</h2>
 
-            <form action="POST">
+            <form class="js-form" action="POST">
               <label class="form__label"  for="name">
                 <input type="text" id="name" placeholder="Имя" required>
               </label>
 
-              <label class="form__label"  for="phone">
-                <input type="tel" id="phone" placeholder="Телефон" required>
+              <label class="form__label" for="phone">
+                <input type="tel" class="js-phone-mask non-empty" id="phone"
+                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" aria-label="Введите Ваш номер телефона" placeholder="Телефон" required>
               </label>
 
               <button class="link form__button" type="submit">Отправить</button>
@@ -483,6 +484,35 @@
       <img src="img/sparta-logo-red.png" width="156" height="56" alt="Sparta Логотип">
     </div>
   </footer>
+
+  <div class="overlay"></div>
+
+  <section class="modal-form modal-form-js">
+    <div class="modal-form__container">
+      <h2 class="modal-form__header">Попробуй выжить</h2>
+      <p class="modal-form__description">
+        Оставь свой номер телефона, наши менеджеры свяжутся с тобой для подтверждения заявки
+      </p>
+
+      <section class="form">
+        <h2 class="visually-hidden">Форма заказа</h2>
+
+        <form class="js-form" action="POST">
+          <label class="form__label"  for="name-2">
+            <input type="text" id="name-2" placeholder="Имя" required autofocus>
+          </label>
+
+          <label class="form__label" for="phone-2">
+            <input type="tel" class="js-phone-mask non-empty" id="phone-2"
+            pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" aria-label="Введите Ваш номер телефона" placeholder="Телефон" required>
+          </label>
+
+          <button class="link form__button" type="submit">Отправить</button>
+          <button class="modal-form__button modal-button-js" type="button" title="Закрыть"></button>
+        </form>
+      </section>
+    </div>    
+  </section>
 
 <script src="js/plugins/script.min.js"></script>
 <script src="js/script.min.js"></script>

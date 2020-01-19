@@ -1,0 +1,121 @@
+.modal-form {
+  width: 100vw;
+  max-width: 512px;
+  position: fixed;
+  z-index: 51;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-500%);
+  opacity: 0;
+
+  color: $color-white;
+
+  padding: 70px 25px 110px;
+
+  background-image: url("../img/popup-bg.png");
+  background-repeat: no-repeat;
+  background-size: 130% 100%;
+  background-position: center;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.modal-form--show {
+  animation-name: modal-form-show;
+}
+
+.modal-form--hide {
+  animation-name: modal-form-hide;
+}
+
+.modal-form__container {
+  max-width: 367px;
+  
+  margin: 0 auto;
+}
+
+.modal-form__header {
+  font-family: $font-family-decorate;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.65px;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $laptop-width) {
+    font-size: 53px;
+    line-height: 53px;
+  }
+}
+
+.modal-form__description {
+  display: none;
+}
+
+.modal-form .form__button {
+  min-width: auto;
+}
+
+.modal-form .form__label:first-of-type {
+  margin-bottom: 25px;
+}
+
+.modal-form__button {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+
+  background-image: url("../img/popup-button.png");
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: transform $transition-time;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes modal-form-show {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-form-hide {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-500%);
+    opacity: 0;
+  }
+}

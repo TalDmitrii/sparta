@@ -104,6 +104,15 @@
 }
 
 .page-header__tel {
+  transition: color $transition-time;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+  
   @media (min-width: $tablet-width) {
     order: 3;
   }

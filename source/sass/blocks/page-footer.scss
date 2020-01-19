@@ -28,6 +28,15 @@
 
   margin-bottom: 40px;
 
+  transition: color $transition-time;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
   }
@@ -42,6 +51,17 @@
   margin-bottom: 50px;
 
   border-bottom: 1px dashed $color-grey;
+
+  transition: color $transition-time, border-color $transition-time;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+
+    border-color: $main-color;
+  }
 
   @media (min-width: $tablet-width) {
     margin: 0 25px;

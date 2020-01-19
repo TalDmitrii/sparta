@@ -158,6 +158,7 @@
   font-size: 28px;
   line-height: 36px;
   font-weight: 400;
+  color: rgba($color-grey, 0.6);
 }
 
 .feedback__pagination .swiper-pagination-current {
@@ -187,6 +188,12 @@
   transform: translateX(-125px);
 
   background-image: url("../img/button-left.png");
+
+  &:hover,
+  &:focus {
+    animation-name: button-prev-animate;
+    animation-duration: 0.5s;
+  }
 }
 
 .feedback__button--next {
@@ -196,4 +203,62 @@
   transform: translateX(125px);
 
   background-image: url("../img/button-right.png");
+
+  &:hover,
+  &:focus {
+    animation-name: button-next-animate;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes button-prev-animate {
+  0% {
+    transform: translateX(-125px) rotate(10deg);
+  }
+
+  20% {
+    transform: translateX(-125px) rotate(-10deg);
+  }
+
+  40% {
+    transform: translateX(-125px) rotate(10deg);
+  }
+
+  60% {
+    transform: translateX(-125px) rotate(-10deg);
+  }
+
+  80% {
+    transform: translateX(-125px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateX(-125px) rotate(0);
+  }
+}
+
+@keyframes button-next-animate {
+  0% {
+    transform: translateX(125px) rotate(6deg);
+  }
+
+  20% {
+    transform: translateX(125px) rotate(-6deg);
+  }
+
+  40% {
+    transform: translateX(125px) rotate(6deg);
+  }
+
+  60% {
+    transform: translateX(125px) rotate(-6deg);
+  }
+
+  80% {
+    transform: translateX(125px) rotate(6deg);
+  }
+
+  100% {
+    transform: translateX(125px) rotate(0);
+  }
 }
