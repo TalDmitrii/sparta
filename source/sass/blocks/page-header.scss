@@ -1,5 +1,9 @@
 .page-header {
   display: flex;
+}
+
+.page-header__bg-wrapper {
+  width: 100%;
 
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
@@ -13,13 +17,14 @@
   @media (min-width: $laptop-width) {
     margin-bottom: 90px;
 
-    background-image: url("../img/main-bg-desktop.png");
+    background-image: url("../img/main-bg-1920.png");
     background-size: auto;
   }
-}
 
-.page-header__bg-wrapper {
-  width: 100%;
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/main-bg-3800.png");
+    background-size: cover;
+  }
 }
 
 .page-header__content-wrapper {

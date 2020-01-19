@@ -2144,10 +2144,20 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-size: 130% 100%;
   background-position: center;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
+  @media (min-width: 500px) {
+    .modal-form {
+      width: 90vw;
+      padding: 70px 60px 110px;
+      background-size: 100% 100%; } }
+  @media (min-width: 1024px) {
+    .modal-form {
+      width: 606px;
+      max-width: 606px;
+      padding: 70px 115px 150px; } }
 
 .modal-form--show {
   -webkit-animation-name: modal-form-show;
@@ -2160,6 +2170,9 @@ button.swiper-pagination-bullet {
 .modal-form__container {
   max-width: 367px;
   margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .modal-form__container {
+      max-width: 512px; } }
 
 .modal-form__header {
   font-family: "Besom", "Times", sans-serif;
@@ -2177,12 +2190,23 @@ button.swiper-pagination-bullet {
 
 .modal-form__description {
   display: none; }
+  @media (min-width: 1024px) {
+    .modal-form__description {
+      display: block;
+      margin-bottom: 46px; } }
 
 .modal-form .form__button {
   min-width: auto; }
 
 .modal-form .form__label:first-of-type {
   margin-bottom: 25px; }
+  @media (min-width: 1024px) {
+    .modal-form .form__label:first-of-type {
+      margin-bottom: 22px; } }
+
+@media (min-width: 1024px) {
+  .modal-form .form__label:last-of-type {
+    margin-bottom: 54px; } }
 
 .modal-form__button {
   position: absolute;
@@ -2942,22 +2966,26 @@ button.swiper-pagination-bullet {
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex; }
+
+.page-header__bg-wrapper {
+  width: 100%;
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
   @media (min-width: 768px) {
-    .page-header {
+    .page-header__bg-wrapper {
       background-image: url("../img/main-bg-tablet.png"); } }
   @media (min-width: 1024px) {
-    .page-header {
+    .page-header__bg-wrapper {
       margin-bottom: 90px;
-      background-image: url("../img/main-bg-desktop.png");
+      background-image: url("../img/main-bg-1920.png");
       background-size: auto; } }
-
-.page-header__bg-wrapper {
-  width: 100%; }
+  @media (min-width: 1920px) {
+    .page-header__bg-wrapper {
+      background-image: url("../img/main-bg-3800.png");
+      background-size: cover; } }
 
 .page-header__content-wrapper {
   padding: 10px 15px 142px; }

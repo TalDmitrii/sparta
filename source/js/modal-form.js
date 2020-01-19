@@ -3,15 +3,18 @@
 (function () {
   var page = document.querySelector('body');
   var orderButtons = page.querySelectorAll('.order-button-js');
-  var modalForm = page.querySelector('.modal-form-js');
+  var modalFormContainer = page.querySelector('.modal-form-js');
   var ESC_CODE = 27;
 
-  if (!orderButtons && !orderButtons && !modalForm) {
+  if (!orderButtons && !orderButtons && !modalFormContainer) {
     return;
   }
 
-  var buttonClose = modalForm.querySelector('.modal-button-js');
+  var modalForm = modalFormContainer.querySelector('.js-form');
+  var inputs = modalForm.querySelectorAll('input');
+  var buttonClose = modalFormContainer.querySelector('.modal-button-js');
 
+  // Добавляет обработчик на каждую кнопку для заказа.
   orderButtons.forEach(function(button) {
     button.addEventListener('click', function(evt) {
       evt.preventDefault();
@@ -21,31 +24,93 @@
     });
   });
 
-
+  // Показывает форму, добавляет к ней обработчики.
   function showModalForm() {
-    modalForm.classList.remove('modal-form--hide');
+    modalFormContainer.classList.remove('modal-form--hide');
 
-    if (!modalForm.classList.contains('modal-form--show')) {
-      modalForm.classList.add('modal-form--show');
+    if (!modalFormContainer.classList.contains('modal-form--show')) {
+      modalFormContainer.classList.add('modal-form--show');
     }
 
-    // Обработчик закрывает сообщение об отправке данных при клике по кнопке.
+    // Обработчик закрывает форму при клике по кнопке.
     buttonClose.addEventListener('click', onButtonCloseClick);
 
-    // Обработчик закрывает сообщение об отправке данных по ESC.
+    // Обработчик закрывает форму по ESC.
     document.addEventListener('keydown', onEscKeydown);
     
-    // Обработчик закрывает сообщение об отправке данных при клике по произвольной области.
+    // Обработчик закрывает форму при клике по произвольной области.
     document.addEventListener('click', onWindowClick);
   }
   
-  
+  // Скрывает форму.
   function hideModalForm() {
-    modalForm.classList.remove('modal-form--show');
+    modalFormContainer.classList.remove('modal-form--show');
 
-    if (!modalForm.classList.contains('modal-form--hide')) {
-      modalForm.classList.add('modal-form--hide');
+    if (!modalFormContainer.classList.contains('modal-form--hide')) {
+      modalFormContainer.classList.add('modal-form--hide');
     }
+  }
+
+  // Отправляет данные формы.
+  modalForm.addEventListener('submit', function (evt) {
+    // Сбрасывает стандартное поведение формы.
+    evt.preventDefault();
+
+    window.backend.upload(new FormData(modalForm), successUploadForm, errorUploadForm);
+  });
+
+  // Функция сообщает о неуспешной попытке загрузки данных.
+  function errorUploadForm() {
+    // Закрывает форму.
+    hideModalForm();
+
+    // Сбрасывает все значения формы.
+    setCustomValue();
+
+    // Показывает сообщение об удачной попытке загрузки данных.
+    renderMessage(false);
+  }
+
+  // Функция сообщает об успешной попытке загрузки данных.
+  function successUploadForm() {
+    // Закрывает форму.
+    hideModalForm();
+
+    // Сбрасывает все значения формы.
+    setCustomValue();
+
+    // Показывает сообщение об удачной попытке загрузки данных.
+    renderMessage(true);   
+  }
+
+  // Сбрасывает все значения формы на начальные.
+  function setCustomValue() {
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].parentNode.classList.remove('form__label--valid');
+      inputs[i].value = '';
+      inputs[i].blur();
+    }
+  }
+
+  // Создаёт сообщение о загрузке данных из формы, добавляет обработчики закрытия сообщения.
+  // @param {bool} isSuccess - Статус сообщения: отправлено или нет.
+  function renderMessage(isSuccess) {
+    // Создаёт сообщение на основе шаблона в зависимости от статуса 'успешно/неуспешно'.
+    window.modalMessage.renderMessage(isSuccess);
+
+    // Обработчик закрывает сообщение об отправке данных по ESC.
+    document.addEventListener('keydown', onEscKeydown);
+
+    // Обработчик закрывает сообщение об отправке данных при клике по произвольной области.
+    document.addEventListener('click', onWindowClick);
+
+    // Обработчик закрывает сообщение об отправке данных при клике по кнопке.
+    window.modalMessage.onButtonClick(onButtonCloseClick);
+  }
+
+  // Удаляет информационное сообщение.
+  function removeMessage() {
+    window.modalMessage.removeMessage();
   }
 
   // Показывает оверлей, убирает скролл на странице.
@@ -60,14 +125,14 @@
     scrollLock.enablePageScroll(page);
   }
 
-  // Закрывает сообщение об отправке данных по ESC.
+  // Закрывает форму по ESC.
   function onEscKeydown(evt) {
     if (evt.keyCode === ESC_CODE) {
       onButtonCloseClick();
     }
   }
 
-  // Закрывает сообщение об отправке данных при клике по произвольной области.
+  // Закрывает форму при клике по произвольной области.
   function onWindowClick(evt) {
     var target = evt.target;
 
@@ -76,10 +141,12 @@
     }
   }
 
-  // Закрывает сообщение об отправке данных по клику на кнопку.
+  // Закрывает форму по клику на кнопку.
   function onButtonCloseClick() {
-    hideModalForm();
-    removeOverlay();
+    setTimeout(removeOverlay, 200);
+    setTimeout(hideModalForm, 200);
+
+    window.modalMessage.removeMessage();
 
     buttonClose.removeEventListener('click', onButtonCloseClick);
     document.removeEventListener('keydown', onEscKeydown);
